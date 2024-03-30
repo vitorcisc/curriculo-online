@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Meu Currículo</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+       }
+
+       .section {
+           margin-bottom: 20px;
+       }
+
+       h2 {
+           color: #333;
+       }
+
+       p {
+           color: #666;
+       }
+
+       ul {
+           list-style-type: none;
+           padding: 0;
+       }
+
+       .btn {
+           display: inline-block;
+           padding: 10px 20px;
+           background-color: #8b8d8d;
+           color: #0e0e0e;
+           text-decoration: none;
+           border: none;
+           cursor: pointer;
+       }
+
+       .btn:hover {
+           background-color: #3d4145;
+       }
+   </style>
+</head>
+<body>
+   <div class="section" id="quem-sou-eu">
+       <h2>Vitor Ciscoto</h2>
+       <button class="btn" onclick="toggleVisibility('quem-sou-eu-desc')">Mostrar Descrição</button>
+       <p id="quem-sou-eu-desc" style="display:none;">Vitor Ciscoto, 30 anos, São Paulo SP, cursando ánalise e desenvolvimentos de sistemas.</p>
+   </div>
+
+   <div class="section" id="formacoes-academicas">
+       <h2>Formação Acadêmica</h2>
+       <button class="btn" onclick="toggleVisibility('formacoes-academicas-desc')">Mostrar Formação Acadêmica</button>
+       <ul id="formacoes-academicas-desc" style="display:none;">
+           
+           <li>Ánalise e Desenvilvimento de Sistemas - conclusão 01/2026</li>
+       </ul>
+   </div>
+
+   <div class="section" id="contato">
+       <h2>Contato</h2>
+       <button class="btn" onclick="toggleVisibility('contato-desc')">Mostrar Contato</button>
+       <p id="contato-desc" style="display:none;">Email: Vitorciscoto@uninter.com<br>Telefone: (11) 991pl-jtac<br>LinkedIn: <a href="https://www.linkedin.com/in/vitor-ciscoto-453172294/">Linkedin</a></p>
+   </div>
+
+   <div class="section" id="portfolio-pessoal">
+       <h2>Portfólio Pessoal</h2>
+       <button class="btn" onclick="toggleVisibility('portfolio-pessoal-desc')">colabs Exercicios</button>
+       <ul id="portfolio-pessoal-desc" style="display:none;">
+           <li><a href="https://colab.research.google.com/drive/1nTTLA4Dx7auiUFvFwl0G8IUZCxdZeQBi">colabs Exercicios</a></li>
+           
+       </ul>
+   </div>
+
+   <script>
+       function toggleVisibility(id) {
+           var element = document.getElementById(id);
+           if (element.style.display === "none") {
+               element.style.display = "block";
+           } else {
+               element.style.display = "none";
+           }
+       }
+   </script>
+</body>
+</html>
